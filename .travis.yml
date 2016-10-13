@@ -14,7 +14,6 @@ addons:
       - tcl8.5
       - uuid  # for uuidgen
       - r-base
-      - r-recommended
 
 before_install:
   - cd $HOME
@@ -26,6 +25,7 @@ before_install:
   - export PATH="$PATH:$PWD/lua_install/bin:$HOME/Hermes/bin"
   - cd -
   - which Rscript
+  - R --version
 
 install:
   - luarocks install luaposix
